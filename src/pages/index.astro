@@ -1,0 +1,249 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Card from '../components/Card.astro';
+import StatCard from '../components/StatCard.astro';
+
+// Placeholder images - replace with actual images in production
+const heroImage = "https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80";
+const aboutImage = "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80";
+const solutionImage1 = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1748&q=80";
+const solutionImage2 = "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80";
+const solutionImage3 = "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1722&q=80";
+---
+
+<Layout title="Home">
+  <!-- Hero Section -->
+  <section class="relative">
+    <div class="absolute inset-0 bg-black/50 z-10"></div>
+    <div class="relative h-[80vh] overflow-hidden">
+      <img 
+        src={heroImage} 
+        alt="African landscape contrasting pollution with sustainable environments" 
+        class="absolute w-full h-full object-cover"
+        fetchpriority="high"
+      />
+    </div>
+    
+    <div class="absolute inset-0 z-20 flex items-center justify-center text-center px-4">
+      <div class="max-w-4xl">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 font-display leading-tight">
+          Fighting Single-Use Plastics for a Greener Africa!
+        </h1>
+        <p class="text-xl text-cream-light mb-8 max-w-2xl mx-auto">
+          Join our movement to combat plastic pollution and create sustainable communities across Africa, starting with Nigeria.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <!-- <Button href="/get-involved" size="lg">Join the Movement</Button> -->
+          <Button href="/about" variant="outline" size="lg">Learn More</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Overview -->
+  <section class="py-20 bg-cream-light">
+    <div class="container mx-auto px-4">
+      <SectionHeading 
+        title="Our Mission" 
+        subtitle="Terra Verte Afrika is dedicated to eliminating single-use plastics across Africa through education, advocacy, and sustainable alternatives.  "
+        centered={true}
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <StatCard 
+          value="500M+"
+          label="Plastic items prevented from entering oceans"
+          icon='<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z" /></svg>'
+        />
+        <StatCard 
+          value="25+"
+          label="Communities engaged across Nigeria"
+          icon='<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>'
+        />
+        <StatCard 
+          value="10K+"
+          label="Volunteers mobilized"
+          icon='<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>'
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <SectionHeading 
+            title="About Terra Verte Afrika" 
+            subtitle="We are a grassroots environmental organization focused on creating sustainable solutions to plastic pollution in Africa."
+          />
+          
+          <p class="mb-6 text-gray-700">
+            Founded in 2020, Terra Verte Afrika began as a small community initiative in Abuja, Nigeria. Today, we've grown into a movement spanning multiple African countries, with a focus on eliminating single-use plastics through education, advocacy, and sustainable alternatives.
+          </p>
+          
+          <p class="mb-8 text-gray-700">
+            Our team of passionate environmentalists, community organizers, and sustainability experts work together to create lasting change in how communities across Africa interact with plastics and waste management.
+          </p>
+          
+          <Button href="/about">Learn More About Us</Button>
+        </div>
+        
+        <div class="relative">
+          <img 
+            src={aboutImage} 
+            alt="Terra Verte Afrika team members working in a community" 
+            class="rounded-lg shadow-xl w-full h-auto"
+          />
+          <div class="absolute -bottom-6 -left-6 bg-green p-6 rounded-lg shadow-lg max-w-xs">
+            <p class="text-white font-medium italic">
+              "Our vision is an Africa free from plastic pollution, where communities thrive in harmony with nature."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem Section -->
+  <section class="py-20 bg-cream-light">
+    <div class="container mx-auto px-4">
+      <SectionHeading 
+        title="The Plastic Crisis" 
+        subtitle="Single-use plastics are devastating Africa's environment, wildlife, and communities."
+        centered={true}
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <Card 
+          title="Environmental Impact" 
+          image="https://images.unsplash.com/photo-1604187351574-c75ca79f5807?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+          imageAlt="Plastic pollution on African beach"
+        >
+          <p>Over 8 million tons of plastic enter our oceans each year, with Africa's coastlines particularly affected. This pollution destroys marine ecosystems and threatens biodiversity.</p>
+        </Card>
+        
+        <Card 
+          title="Health Concerns" 
+          image="https://images.unsplash.com/photo-1605600659873-d808a13e4d2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
+          imageAlt="Plastic waste affecting community health"
+        >
+          <p>Plastic waste clogs drainage systems, creating breeding grounds for disease-carrying mosquitoes and contributing to flooding in urban areas across Nigeria and beyond.</p>
+        </Card>
+        
+        <Card 
+          title="Economic Burden" 
+          image="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+          imageAlt="Economic impact of plastic pollution"
+        >
+          <p>The economic cost of plastic pollution in Africa amounts to billions annually through tourism losses, cleanup costs, and damage to fishing industries that many communities depend on.</p>
+        </Card>
+      </div>
+      
+      <div class="text-center mt-12">
+        <Button href="/problem">Learn More About The Problem</Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <SectionHeading 
+        title="Our Solutions" 
+        subtitle="We implement practical, sustainable alternatives to single-use plastics across African communities."
+        centered={true}
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <Card 
+          title="Community Education" 
+          image={solutionImage1}
+          imageAlt="Community education workshop"
+        >
+          <p>We conduct workshops and school programs to educate communities about the dangers of plastic pollution and teach practical alternatives.</p>
+        </Card>
+        
+        <Card 
+          title="Sustainable Alternatives" 
+          image={solutionImage2}
+          imageAlt="Sustainable alternatives to plastic"
+        >
+          <p>We promote and distribute eco-friendly alternatives to common single-use plastics, including biodegradable bags, reusable bottles, and bamboo products.</p>
+        </Card>
+        
+        <Card 
+          title="Policy Advocacy" 
+          image={solutionImage3}
+          imageAlt="Policy advocacy meeting"
+        >
+          <p>We work with local and national governments to develop and implement policies that reduce plastic waste and promote circular economy principles.</p>
+        </Card>
+      </div>
+<!--       
+      <div class="text-center mt-12">
+        <Button href="/solutions">Explore Our Solutions</Button>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <!-- <section class="py-20 bg-green text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 font-display">Ready to Make a Difference?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of volunteers across Africa who are fighting plastic pollution and creating a sustainable future for our continent.</p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="/get-involved" variant="outline" size="lg">Volunteer With Us</Button>
+        <Button href="/donate" variant="secondary" size="lg">Support Our Work</Button>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Latest News/Blog Preview -->
+  <section class="py-20 bg-cream-light">
+    <div class="container mx-auto px-4">
+      <SectionHeading 
+        title="Latest Updates" 
+        subtitle="Stay informed about our projects, success stories, and tips for sustainable living."
+        centered={true}
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <Card 
+          title="Beach Cleanup Removes 2 Tons of Plastic" 
+          image="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+          imageAlt="Beach cleanup volunteers"
+        >
+          <p>Our recent cleanup event at Abuja Beach gathered over 200 volunteers who collected more than 2 tons of plastic waste in a single day.</p>
+          <a href="/blog/beach-cleanup" class="text-green font-medium hover:underline mt-4 inline-block">Read More →</a>
+        </Card>
+        
+        <Card 
+          title="5 Easy Ways to Reduce Plastic Use" 
+          image="https://images.unsplash.com/photo-1528190336454-13cd56b45b5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+          imageAlt="Reusable items replacing plastic"
+        >
+          <p>Simple changes in your daily routine can significantly reduce your plastic footprint. Here are five easy swaps you can make today.</p>
+          <a href="/blog/reduce-plastic-use" class="text-green font-medium hover:underline mt-4 inline-block">Read More →</a>
+        </Card>
+        
+        <Card 
+          title="New Partnership with Local Schools" 
+          image="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1722&q=80"
+          imageAlt="School environmental education program"
+        >
+          <p>We're excited to announce our new educational program launching in 15 schools across Abuja, reaching over 5,000 students.</p>
+          <a href="/blog/school-partnership" class="text-green font-medium hover:underline mt-4 inline-block">Read More →</a>
+        </Card>
+      </div>
+      
+      <!-- <div class="text-center mt-12">
+        <Button href="/blog">View All Updates</Button>
+      </div> -->
+    </div>
+  </section>
+</Layout>

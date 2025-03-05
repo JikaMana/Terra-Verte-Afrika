@@ -1,0 +1,322 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Button from '../components/Button.astro';
+import StatCard from '../components/StatCard.astro';
+
+// Placeholder images - replace with actual images in production
+const heroImage = "https://images.unsplash.com/photo-1604187351574-c75ca79f5807?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80";
+---
+
+<Layout title="The Problem">
+  <!-- Hero Section -->
+  <section class="relative">
+    <div class="absolute inset-0 bg-black/60 z-10"></div>
+    <div class="relative h-[60vh] overflow-hidden">
+      <img 
+        src={heroImage} 
+        alt="Plastic pollution on African beach" 
+        class="absolute w-full h-full object-cover"
+      />
+    </div>
+    
+    <div class="absolute inset-0 z-20 flex items-center justify-center text-center px-4">
+      <div class="max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 font-display">
+          The Plastic Crisis in Africa
+        </h1>
+        <p class="text-xl text-cream-light max-w-3xl mx-auto">
+          Understanding the devastating impact of single-use plastics on our environment, communities, and future.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <SectionHeading 
+        title="The Scale of the Problem" 
+        subtitle="Single-use plastics are creating an environmental crisis across Africa that threatens ecosystems, communities, and economies."
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+        <div>
+          <p class="mb-6 text-gray-700">
+            Africa faces a growing plastic pollution crisis, with an estimated 17 million tons of plastic waste generated annually across the continent. In Nigeria alone, over 32 million tons of solid waste are produced yearly, with plastic waste constituting about 2.5 million tons.
+          </p>
+          
+          <p class="mb-6 text-gray-700">
+            The majority of this plastic is single-use: bags, bottles, packaging, and straws that are used once and then discarded. Without adequate waste management infrastructure, much of this plastic ends up in landfills, waterways, and ultimately the ocean.
+          </p>
+          
+          <p class="mb-6 text-gray-700">
+            What makes this crisis particularly concerning is that plastic production in Africa is increasing at a rate of about 8% annually, outpacing both economic growth and waste management capacity. If current trends continue, plastic pollution in Africa could double by 2030.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-6">
+          <StatCard 
+            value="8M+"
+            label="Tons of plastic enter oceans yearly"
+          />
+          <StatCard 
+            value="2.5M"
+            label="Tons of plastic waste in Nigeria annually"
+          />
+          <StatCard 
+            value="500"
+            label="Years for plastic to degrade"
+          />
+          <StatCard 
+            value="79%"
+            label="Of all plastic ever produced is in landfills or nature"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Environmental Impact Section -->
+  <section class="py-20 bg-cream-light">
+    <div class="container mx-auto px-4">
+      <SectionHeading 
+        title="Environmental Impact" 
+        subtitle="How plastic pollution is devastating Africa's natural ecosystems."
+        centered={true}
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="text-green text-4xl mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-green-dark mb-3">Marine Ecosystems</h3>
+          <p class="text-gray-700">
+            Plastic waste is devastating marine life along Africa's 30,500 km of coastline. Over 100,000 marine animals die annually from plastic entanglement or ingestion in African waters alone.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="text-green text-4xl mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-green-dark mb-3">Soil Contamination</h3>
+          <p class="text-gray-700">
+            As plastics break down, they release harmful chemicals into soil, reducing agricultural productivity and contaminating food sources. This is particularly devastating in a continent where 65% of the population relies on agriculture.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="text-green text-4xl mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-green-dark mb-3">Biodiversity Loss</h3>
+          <p class="text-gray-700">
+            Africa is home to some of the world's most diverse ecosystems, but plastic pollution is threatening this biodiversity. Microplastics have been found in freshwater systems throughout the continent, affecting everything from insects to large mammals.
+          </p>
+        </div>
+      </div>
+      
+      <div class="mt-16">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-green-dark mb-6">Before & After: The Visual Impact</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1746&q=80" 
+                alt="Clean beach before plastic pollution" 
+                class="rounded-lg w-full h-auto mb-3"
+              />
+              <p class="text-center font-medium">Before: Pristine African coastline</p>
+            </div>
+            
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1604187351574-c75ca79f5807?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
+                alt="Beach polluted with plastic waste" 
+                class="rounded-lg w-full h-auto mb-3"
+              />
+              <p class="text-center font-medium">After: Coastline affected by plastic pollution</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Health Impact Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <SectionHeading 
+        title="Health Impacts" 
+        subtitle="How plastic pollution affects human health across African communities."
+      />
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12">
+        <div>
+          <img 
+            src="https://images.unsplash.com/photo-1605600659873-d808a13e4d2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" 
+            alt="Plastic waste affecting community health" 
+            class="rounded-lg shadow-xl w-full h-auto"
+          />
+        </div>
+        
+        <div>
+          <ul class="space-y-6">
+            <li class="flex items-start">
+              <div class="bg-green-light p-2 rounded-full mr-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-green-dark text-lg">Waterborne Diseases</h4>
+                <p class="text-gray-700">
+                  Plastic waste clogs drainage systems, creating stagnant water that becomes a breeding ground for mosquitoes and other disease vectors. This contributes to the spread of malaria, dengue fever, and other waterborne diseases that affect millions of Africans annually.
+                </p>
+              </div>
+            </li>
+            
+            <li class="flex items-start">
+              <div class="bg-green-light p-2 rounded-full mr-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-green-dark text-lg">Toxic Exposure</h4>
+                <p class="text-gray-700">
+                  The common practice of burning plastic waste releases toxic chemicals like dioxins, furans, and polychlorinated biphenyls (PCBs) into the air. These toxins are linked to respiratory issues, cancer, and reproductive problems in communities near dump sites.
+                </p>
+              </div>
+            </li>
+            
+            <li class="flex items-start">
+              <div class="bg-green-light p-2 rounded-full mr-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-green-dark text-lg">Food Chain Contamination</h4>
+                <p class="text-gray-700">
+                  Microplastics have entered the food chain, with studies finding plastic particles in fish caught in African waters. This poses a significant health risk to the estimated 200 million Africans who rely on fish as their primary source of protein.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Economic Impact Section -->
+  <section class="py-20 bg-cream-light">
+    <div class="container mx-auto px-4">
+      <SectionHeading 
+        title="Economic Impact" 
+        subtitle="The hidden costs of plastic pollution on African economies."
+        centered={true}
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-green-dark mb-3">Tourism Losses</h3>
+          <p class="text-gray-700 mb-4">
+            Plastic pollution on beaches and in marine environments damages Africa's tourism industry, which accounts for about 8.5% of the continent's GDP. Countries like Kenya, Tanzania, and South Africa lose an estimated $150 million annually due to reduced tourism from plastic-polluted beaches.
+          </p>
+          <div class="text-3xl font-bold text-green">$150M+</div>
+          <div class="text-gray-600">Annual tourism losses</div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-green-dark mb-3">Fishing Industry Damage</h3>
+          <p class="text-gray-700 mb-4">
+            Plastic pollution reduces fish stocks and damages fishing equipment. In West Africa alone, the fishing industry loses approximately $70 million each year due to plastic pollution, affecting the livelihoods of over 7 million people who depend on fishing.
+          </p>
+          <div class="text-3xl font-bold text-green">$70M+</div>
+          <div class="text-gray-600">Annual fishing industry losses</div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-green-dark mb-3">Infrastructure Costs</h3>
+          <p class="text-gray-700 mb-4">
+            Plastic waste clogs drainage systems, contributing to flooding that damages infrastructure and requires costly repairs. In Abuja, Nigeria, plastic-clogged drains contribute to annual flood damage estimated at $4 billion.
+          </p>
+          <div class="text-3xl font-bold text-green">$4B+</div>
+          <div class="text-gray-600">Annual flood damage in Abuja</div>
+        </div>
+      </div>
+      
+      <div class="mt-16 text-center">
+        <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+          The total economic cost of plastic pollution to African economies is estimated at over $20 billion annually—funds that could otherwise be invested in education, healthcare, and sustainable development.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Map Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <SectionHeading 
+        title="Plastic Pollution Hotspots" 
+        subtitle="Areas across Africa most severely affected by plastic pollution."
+        centered={true}
+      />
+ 
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="font-bold text-green-dark">Abuja, Nigeria</h4>
+          <p class="text-gray-700">
+            Over 500,000 tons of plastic waste generated annually, with much ending up in the Abuja Lagoon and Atlantic Ocean.
+          </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="font-bold text-green-dark">Accra, Ghana</h4>
+          <p class="text-gray-700">
+            Agbogbloshie, one of the world's largest e-waste dumps, contains massive amounts of plastic waste from electronics.
+          </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="font-bold text-green-dark">Mombasa, Kenya</h4>
+          <p class="text-gray-700">
+            Major coastal city with significant marine plastic pollution affecting coral reefs and marine life.
+          </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="font-bold text-green-dark">Cairo, Egypt</h4>
+          <p class="text-gray-700">
+            Plastic pollution in the Nile River contributes significantly to Mediterranean plastic pollution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <!-- <section class="py-20 bg-green text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 font-display">Be Part of the Solution</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        The plastic crisis is severe, but together we can make a difference. Join Terra Verte Afrika in our mission to combat plastic pollution across the continent.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="/solutions" variant="outline" size="lg">Explore Solutions</Button>
+        <Button href="/get-involved" variant="secondary" size="lg">Get Involved</Button>
+      </div>
+    </div>
+  </section> -->
+</Layout>

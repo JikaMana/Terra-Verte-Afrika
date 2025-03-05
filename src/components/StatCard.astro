@@ -1,0 +1,15 @@
+---
+export interface Props {
+  value: string;
+  label: string;
+  icon?: string;
+}
+
+const { value, label, icon } = Astro.props;
+---
+
+<div class="bg-white rounded-lg shadow-md p-6 text-center">
+  {icon && <div class="text-green text-4xl mb-4" set:html={icon} />}
+  <div class="text-4xl font-bold text-green-dark mb-2">{value}</div>
+  <div class="text-gray-600">{label}</div>
+</div>

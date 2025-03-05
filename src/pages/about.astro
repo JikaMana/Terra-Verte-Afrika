@@ -1,0 +1,305 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import TeamMember from '../components/TeamMember.astro';
+import Button from '../components/Button.astro';
+
+// Founder images
+const founderImage = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80";
+const campusImage = "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80";
+const teamMembers = [
+  {
+    name: "Amina Okafor",
+    role: "Founder & Executive Director",
+    image: founderImage,
+    socialLinks: {
+      twitter: "#",
+      linkedin: "#",
+      instagram: "#"
+    }
+  },
+  {
+    name: "Kofi Mensah",
+    role: "Director of Operations",
+    image: "https://images.unsplash.com/photo-1507152832244-10d45c7eda57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80",
+    socialLinks: {
+      linkedin: "#",
+      twitter: "#"
+    }
+  },
+  {
+    name: "David Nkosi",
+    role: "Head of Education Programs",
+    image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    socialLinks: {
+      linkedin: "#",
+      instagram: "#"
+    }
+  },
+  {
+    name: "Fatima Ibrahim",
+    role: "Community Outreach Manager",
+    image: "https://images.unsplash.com/photo-1573497019418-b400bb3ab074?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    socialLinks: {
+      twitter: "#",
+      instagram: "#"
+    }
+  }
+];
+---
+
+<Layout title="About Us">
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
+    <video 
+      class="absolute w-full h-full object-cover"
+      autoplay 
+      loop 
+      muted 
+      playsinline
+    >
+      <source src="https://player.vimeo.com/external/517629306.hd.mp4?s=b0bea37ef4b0a29d6b291b6d2584d81ffb305f1d&profile_id=175" type="video/mp4">
+    </video>
+    
+    <div class="absolute inset-0 z-20 flex items-center">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 font-display leading-tight">
+            Our Story
+          </h1>
+          <p class="text-xl text-cream-light leading-relaxed">
+            From a student's vision at the Air Force Institute of Technology to a movement transforming Africa's relationship with plastics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Origin Story Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <SectionHeading 
+            title="The Birth of Terra Verte Afrika" 
+            subtitle="How a personal journey became a continental movement"
+          />
+          
+          <div class="prose prose-lg prose-green">
+            <p>
+              Terra Verte Afrika began in the halls of the Air Force Institute of Technology, where I witnessed firsthand the overwhelming presence of plastic waste on our campus. As an environmental engineering student, I was struck by the disconnect between our academic discussions of sustainability and the reality of our daily practices.
+            </p>
+            
+            <p>
+              The name "Terra Verte Afrika" combines Latin and Swahili influences - "Terra Verte" meaning "Green Earth" and "Afrika" representing our continent's unique spelling - symbolizing our commitment to blend traditional African wisdom with modern environmental solutions.
+            </p>
+            
+            <blockquote class="italic text-green-dark border-l-4 border-green pl-4 my-6">
+              "What started as a campus cleanup initiative has grown into a movement that's transforming how Africa thinks about plastic waste."
+            </blockquote>
+            
+            <p>
+              My university education opened my eyes to the scientific reality of plastic pollution, but it was the daily sight of plastic-choked drainage systems during rainy seasons that truly catalyzed action. We started with simple campus cleanup drives, but quickly realized the need for systemic change.
+            </p>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <img 
+            src={campusImage} 
+            alt="Air Force Institute of Technology campus" 
+            class="rounded-lg shadow-xl w-full h-auto"
+          />
+          <div class="absolute -bottom-6 -right-6 bg-green p-6 rounded-lg shadow-lg max-w-xs">
+            <p class="text-white font-medium italic">
+              "Every piece of plastic we remove today is one less threat to tomorrow's Africa."
+            </p>
+            <p class="text-white font-bold mt-2">- Amina Okafor, Founder</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section class="py-20 bg-gradient-to-b from-cream-light to-white">
+    <div class="container mx-auto px-4">
+      <SectionHeading 
+        title="Our Purpose" 
+        subtitle="Guided by clear goals and unwavering values"
+        centered={true}
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div class="bg-white p-8 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+          <h3 class="text-2xl font-bold text-green-dark mb-4">Mission Statement</h3>
+          <p class="text-gray-700 leading-relaxed">
+            To eliminate single-use plastics across Africa through education, innovation, and community action, while preserving our cultural heritage and promoting sustainable development.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+          <h3 class="text-2xl font-bold text-green-dark mb-4">Vision Statement</h3>
+          <p class="text-gray-700 leading-relaxed">
+            An Africa where communities thrive in harmony with nature, where traditional wisdom meets modern sustainability, and where future generations inherit clean waters and healthy ecosystems.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <div class="bg-white p-8 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+          <h3 class="text-2xl font-bold text-green-dark mb-4">Short-Term Goals</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Implement plastic-free zones in 50 university campuses</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Establish student environmental clubs in 200 schools</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Train 1,000 youth environmental ambassadors</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+          <h3 class="text-2xl font-bold text-green-dark mb-4">Long-Term Goals</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Achieve 50% reduction in single-use plastics across major African cities</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Implement comprehensive plastic policies in 20 African countries</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Create a continent-wide network of sustainable waste management systems</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <SectionHeading 
+        title="Our Journey" 
+        subtitle="From campus initiative to continental movement"
+        centered={true}
+      />
+      
+      <div class="relative mt-12">
+        <!-- Timeline Line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green"></div>
+        
+        <!-- Timeline Items -->
+        <div class="space-y-12">
+          <div class="relative">
+            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div class="w-8 h-8 bg-green rounded-full border-4 border-white shadow"></div>
+            </div>
+            <div class="ml-auto mr-8 md:mr-auto md:ml-8 p-6 bg-white rounded-lg shadow-md w-full md:w-[calc(50%-4rem)] transform hover:scale-105 transition-transform duration-300">
+              <h3 class="text-xl font-bold text-green-dark mb-2">2020: The Beginning</h3>
+              <p class="text-gray-700">First campus cleanup drive at Air Force Institute of Technology</p>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div class="w-8 h-8 bg-green rounded-full border-4 border-white shadow"></div>
+            </div>
+            <div class="mr-auto ml-8 md:ml-auto md:mr-8 p-6 bg-white rounded-lg shadow-md w-full md:w-[calc(50%-4rem)] transform hover:scale-105 transition-transform duration-300">
+              <h3 class="text-xl font-bold text-green-dark mb-2">2021: Expansion</h3>
+              <p class="text-gray-700">Launched pilot programs in 5 Nigerian universities</p>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div class="w-8 h-8 bg-green rounded-full border-4 border-white shadow"></div>
+            </div>
+            <div class="ml-auto mr-8 md:mr-auto md:ml-8 p-6 bg-white rounded-lg shadow-md w-full md:w-[calc(50%-4rem)] transform hover:scale-105 transition-transform duration-300">
+              <h3 class="text-xl font-bold text-green-dark mb-2">2022: Recognition</h3>
+              <p class="text-gray-700">Won the African Environmental Innovation Award</p>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div class="w-8 h-8 bg-green rounded-full border-4 border-white shadow"></div>
+            </div>
+            <div class="mr-auto ml-8 md:ml-auto md:mr-8 p-6 bg-white rounded-lg shadow-md w-full md:w-[calc(50%-4rem)] transform hover:scale-105 transition-transform duration-300">
+              <h3 class="text-xl font-bold text-green-dark mb-2">2023: Continental Growth</h3>
+              <p class="text-gray-700">Expanded to 10 African countries with 50+ partner organizations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Impact Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <SectionHeading 
+        title="Our Impact" 
+        subtitle="Measurable change we've created across Africa"
+        centered={true}
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div class="bg-white p-8 rounded-lg shadow-md text-center transform hover:scale-105 transition-transform duration-300">
+          <div class="text-4xl font-bold text-green mb-2">500M+</div>
+          <div class="text-xl text-gray-700">Plastic items prevented</div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md text-center transform hover:scale-105 transition-transform duration-300">
+          <div class="text-4xl font-bold text-green mb-2">25+</div>
+          <div class="text-xl text-gray-700">Communities engaged</div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md text-center transform hover:scale-105 transition-transform duration-300">
+          <div class="text-4xl font-bold text-green mb-2">10K+</div>
+          <div class="text-xl text-gray-700">Volunteers mobilized</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-green text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 font-display">Join Our Movement</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Be part of the solution to create a plastic-free Africa. Together, we can make a lasting impact for generations to come.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="/get-involved" variant="outline" size="lg">Volunteer With Us</Button>
+        <Button href="/donate" variant="secondary" size="lg">Support Our Work</Button>
+      </div>
+    </div>
+  </section>
+</Layout>
