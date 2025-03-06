@@ -1,66 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
-import TeamMember from '../components/TeamMember.astro';
-import Button from '../components/Button.astro';
+import backgroundImage from '../assets/our-story-bg.jpeg';
+
+
 
 // Founder images
-const founderImage = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80";
 const campusImage = "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80";
-const teamMembers = [
-  {
-    name: "Amina Okafor",
-    role: "Founder & Executive Director",
-    image: founderImage,
-    socialLinks: {
-      twitter: "#",
-      linkedin: "#",
-      instagram: "#"
-    }
-  },
-  {
-    name: "Kofi Mensah",
-    role: "Director of Operations",
-    image: "https://images.unsplash.com/photo-1507152832244-10d45c7eda57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80",
-    socialLinks: {
-      linkedin: "#",
-      twitter: "#"
-    }
-  },
-  {
-    name: "David Nkosi",
-    role: "Head of Education Programs",
-    image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-    socialLinks: {
-      linkedin: "#",
-      instagram: "#"
-    }
-  },
-  {
-    name: "Fatima Ibrahim",
-    role: "Community Outreach Manager",
-    image: "https://images.unsplash.com/photo-1573497019418-b400bb3ab074?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-    socialLinks: {
-      twitter: "#",
-      instagram: "#"
-    }
-  }
-];
+
 ---
 
 <Layout title="About Us">
   <!-- Hero Section -->
   <section class="relative h-[70vh] overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
-    <video 
-      class="absolute w-full h-full object-cover"
-      autoplay 
-      loop 
-      muted 
-      playsinline
+    <img src={backgroundImage.src} alt="" fetchpriority="high" 
+            class="w-full h-full object-cover"
+
     >
-      <source src="https://player.vimeo.com/external/517629306.hd.mp4?s=b0bea37ef4b0a29d6b291b6d2584d81ffb305f1d&profile_id=175" type="video/mp4">
-    </video>
     
     <div class="absolute inset-0 z-20 flex items-center">
       <div class="container mx-auto px-4">
