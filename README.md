@@ -1,48 +1,43 @@
-# Astro Starter Kit: Basics
+# Terra Verte Afrika Website
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome to the repository for the Terra Verte Afrika website. This project serves as the digital platform for Terra Verte Afrika, a grassroots environmental organization committed to eradicating single-use plastic pollution across Africa, starting with Nigeria.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## About Terra Verte Afrika
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Founded in 2020 in Abuja, Nigeria, Terra Verte Afrika has grown into a movement spanning multiple African countries. Our mission is to eliminate single-use plastics through:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **Community Education:** Conducting workshops and school programs to raise awareness about the dangers of plastic pollution and teaching practical alternatives.
 
-## 🚀 Project Structure
+- **Sustainable Alternatives:** Promoting and distributing eco-friendly substitutes for common single-use plastics, such as biodegradable bags, reusable bottles, and bamboo products.
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Policy Advocacy:** Collaborating with local and national governments to develop and implement policies that reduce plastic waste and promote circular economy principles.
 
-```text
-/
-├── public/
-│   └── favicon.png
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Our vision is an Africa free from plastic pollution, where communities thrive in harmony with nature.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Website Overview
 
-## 🧞 Commands
+The website provides information about our mission, the plastic pollution crisis in Africa, and the solutions we are implementing. It also offers avenues for individuals and organizations to get involved through volunteering, partnerships, and donations.
 
-All commands are run from the root of the project, from a terminal:
+## Technologies Used
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **Astro:** For static site generation and enhanced performance.
 
-## 👀 Want to learn more?
+- **TailwindCSS:** For utility-first CSS styling, ensuring a responsive and modern design.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Contributing
+
+We welcome contributions from the community. If you're interested in contributing to the development of our website or our initiatives, please reach out to us at terraverteafrika@gmail.com.
+
+## Contact Information
+
+- **Email:** terraverteafrika@gmail.com
+
+- **Phone:** +234 810 053 4535
+
+- **Address:** Abuja, Nigeria
+
+For more information, visit our website: [Terra Verte Afrika](https://terraverteafrika.vercel.app/)
+
+---
+
+© 2025 Terra Verte Afrika. All rights reserved.
