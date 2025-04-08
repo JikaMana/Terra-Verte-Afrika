@@ -4,13 +4,13 @@ Welcome to the repository for the Terra Verte Afrika website. This project serve
 
 ## About Terra Verte Afrika
 
-Founded in 2020 in Abuja, Nigeria, Terra Verte Afrika has grown into a movement spanning multiple African countries. Our mission is to eliminate single-use plastics through:
+Founded in 2025 in Abuja, Nigeria, Terra Verte Afrika has grown into a movement spanning multiple African countries. Our mission is to eliminate single-use plastics through:
 
 - **Community Education:** Conducting workshops and school programs to raise awareness about the dangers of plastic pollution and teaching practical alternatives.
 
 - **Sustainable Alternatives:** Promoting and distributing eco-friendly substitutes for common single-use plastics, such as biodegradable bags, reusable bottles, and bamboo products.
 
-- **Policy Advocacy:** Collaborating with local and national governments to develop and implement policies that reduce plastic waste and promote circular economy principles.
+- **Policy Advocacy:** Collaborating with other organisations within campus to develop and implement policies that reduce plastic waste and promote circular economy principles.
 
 Our vision is an Africa free from plastic pollution, where communities thrive in harmony with nature.
 
