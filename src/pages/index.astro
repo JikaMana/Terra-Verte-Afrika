@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import Card from '../components/Card.astro';
-import StatCard from '../components/StatCard.astro';
 
 // Placeholder images - replace with actual images in production
 const heroImage = "https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80";
@@ -35,7 +34,6 @@ const solutionImage3 = "https://images.unsplash.com/photo-1503676260728-1c00da09
           Join our movement to combat plastic pollution and create sustainable communities across Africa, starting with Nigeria.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <!-- <Button href="/get-involved" size="lg">Join the Movement</Button> -->
           <Button href="/about" variant="outline" size="lg">Learn More</Button>
         </div>
       </div>
@@ -71,8 +69,10 @@ const solutionImage3 = "https://images.unsplash.com/photo-1503676260728-1c00da09
           />
           <div class="absolute -bottom-6 -left-6 bg-green p-6 rounded-lg shadow-lg max-w-xs">
             <p class="text-white font-medium italic">
-              "Our vision is an Africa free from plastic pollution, where communities thrive in harmony with nature." <br> -Moshood Fakhir, Terra Verte Afrika Founder
+              "Our vision is an Africa free from plastic pollution, where communities thrive in harmony with nature." 
             </p>
+            <p class="text-white font-bold mt-2">Moshood Fakhir, <br> Terra Verte Afrika Founder</p>
+
           </div>
         </div>
       </div>
